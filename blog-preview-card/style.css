@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+    line-height: 150%;
+}
+
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+}
+
+body {
+    height: 100vh;
+    background: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: var(--white);
+    width: 384px;
+    height: 522px;
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid var(--gray-950);
+    box-shadow: 8px 8px var(--gray-950);
+    transition: box-shadow 500ms linear;
+}
+
+.card:hover {
+    box-shadow: 16px 16px var(--gray-950);
+    cursor: pointer;
+}
+
+.card:hover h1 {
+    color: var(--yellow);
+}
+
+.image-wrapper {
+    width: 336px;     
+    height: 200px;    
+    border-radius: 10px;
+    overflow: hidden; 
+    margin-bottom: 24px;
+}
+
+.image-wrapper img.illustration-article {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+div.category {
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    width: 82px;
+    height: 29px;
+    background: var(--yellow);
+    color: var(--gray-950);
+    font-size: 14px;
+    font-weight: 800;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    width: min-content;
+}
+
+.date-published {
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    font-weight: 800;
+    transition: color 500ms linear;
+}
+
+p {
+    color: var(--gray-500);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 24px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar .image-avatar {
+    width: 32px;
+    height: 32px;
+}
+
+.avatar .name-avatar {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.attribution { 
+    position: absolute;
+    bottom: 0;
+    font-size: 16px; 
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 450px) {
+    .card {
+        width: 327px;
+        height: 501px;
+    }
+
+    .image-wrapper {
+        width: 279px; 
+        height: 200px;
+    }
+
+    div.category, .date-published {
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .attribution {
+        font-size: 14px;
+    }
+}
