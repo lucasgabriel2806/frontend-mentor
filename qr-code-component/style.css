@@ -70,3 +70,9 @@ body {
 .attribution a {
     color: hsl(228, 45%, 44%); 
 }
+
+@media (max-width: 450px) {
+    .attribution {
+        font-size: 14px;
+    }
+}
